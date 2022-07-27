@@ -1,4 +1,4 @@
-                                    // Даём имя
+                                // Даём имя
 let gulp = require('gulp'),
     rename = require('gulp-rename'),                    // переименование
     browserSync = require('browser-sync'),               // автообновление окона в браузере
@@ -11,7 +11,7 @@ const sass = require('gulp-sass')(require('sass'));                    // кон
                                             // Подключили SASS SCSS
 gulp.task('sass', function(){
     return gulp.src('app/scss/**/*.scss')
-        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(sass({outputStyle: 'expanded'}))
         .pipe(rename({suffix: '.min'}))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 8 version']
