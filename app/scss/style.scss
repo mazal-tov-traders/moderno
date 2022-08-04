@@ -287,88 +287,102 @@
     }
   }
 }
+
 // end  product-slider
 // start advantages
-.advantages{
+.advantages {
   background-color: $bg;
   padding: 110px 0;
 }
-.advantages__title{
+
+.advantages__title {
   color: #fff;
 }
-.advantages__inner{
+
+.advantages__inner {
   display: flex;
   justify-content: space-between;
 }
-.advantages__item{
+
+.advantages__item {
   max-width: 370px;
   text-align: center;
   padding: 0px 15px;
-  
-  &:hover{
-    .advantages__item-images{
-      background-color: $green;   // при наведении картинки мменяют цвет 
+
+  &:hover {
+    .advantages__item-images {
+      background-color: $green; // при наведении картинки мменяют цвет 
     }
-    .advantages__item-title{     // при наведени заголовок тоже меняет цвет
+
+    .advantages__item-title {
+      // при наведени заголовок тоже меняет цвет
       color: $green;
     }
   }
-  &-images{
+
+  &-images {
     width: 114px;
     height: 114px;
-    background-color: #fff;   // єто делать нужно для картинок в svg формате
+    background-color: #fff; // єто делать нужно для картинок в svg формате
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto 30px;
-    transition: all .5s;       //  ставится  замедление тем елементам  кто в игре
+    transition: all .5s; //  ставится  замедление тем елементам  кто в игре
   }
-  &-title{
+
+  &-title {
     margin-bottom: 25px;
     font-size: 24px;
     color: #fff;
     font-weight: 500;
     font-family: 'Roboto-Regular';
-    transition: all .5s;      //  ставится  замедление тем елементам  кто в игре
+    transition: all .5s; //  ставится  замедление тем елементам  кто в игре
   }
-  &-text{
+
+  &-text {
     font-size: 15px;
 
   }
 }
+
 // end advantages
 // start author
-.author{
+.author {
   background-image: url(../images/author-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;       // єто для того что бі на моб.устройствах картинка сжималась
+  background-size: cover; // єто для того что бі на моб.устройствах картинка сжималась
   min-height: 750px;
   display: flex;
   justify-content: center;
   align-items: center;
-  &__box{
+
+  &__box {
     max-width: 650px;
-    width: 100%;  // без єтого тега єлемент не растягивается на свое значение. потомучто он под воздействием дисплей флекса и тд.
+    width: 100%; // без єтого тега єлемент не растягивается на свое значение. потомучто он под воздействием дисплей флекса и тд.
     min-height: 215px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: $green;
   }
-  &__title{
+
+  &__title {
     font-size: 30px;
     line-height: 30px;
     color: #ffff;
     margin-right: 45px;
-    max-width: 260px;      // ограничив ширину можно перенести текст на след. строку
-    span{
+    max-width: 260px; // ограничив ширину можно перенести текст на след. строку
+
+    span {
       font-weight: 700;
       font-family: 'Roboto-Regular';
     }
   }
-  &__link{
+
+  &__link {
     font-size: 18px;
     line-height: 36px;
     padding: 14px 40px;
@@ -379,26 +393,30 @@
 // end author
 // start Tutorials
 
-.Tutorials{
+.Tutorials {
   padding: 70px 0 120px;
-  &__inner{
+
+  &__inner {
     display: flex;
     justify-content: space-between;
   }
-  &__item{
+
+  &__item {
     max-width: 370px;
     width: 100%;
   }
 }
-.Tutorials__item{
-  &-images{
+
+.Tutorials__item {
+  &-images {
     min-height: 270px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
+
   }
-  &-title{
+
+  &-title {
     background-color: #f8f8f8;
     font-size: 24px;
     text-align: center;
@@ -409,5 +427,188 @@
     text-align: center;
   }
 }
-  
+
 // end Tutorials
+// start footer
+.footer {
+  background-color: $bg;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0px 80px;
+  }
+}
+
+.footer__copy {
+  border-top: 1px solid #424d53;
+}
+
+.footer__copy-text {
+  text-align: center;
+  font-style: 15px;
+  color: #919699;
+  padding: 25px 0px 25px;
+}
+
+.footer__col {
+  max-width: 270px;
+  width: 100%;
+
+  &-menu {
+    max-width: 220px;
+  }
+
+  &-title {
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    padding-bottom: 22px;
+    margin-bottom: 30px;
+    position: relative;
+
+    &::after {
+      content: ''; // без єтой штуки полоска не появится 
+      position: absolute;
+      bottom: 0;
+      left: 2px;
+      width: 52px;
+      height: 3px;
+      background-color: $green;
+    }
+  }
+
+  &-text {
+    color: #b7c3c8;
+    margin-bottom: 30px;
+  }
+}
+
+.footer__info {
+  margin-top: 10px;
+  color: #fff;
+  font-family: 'Roboto-Regular';
+  font-weight: 500;
+  padding-left: 30px;
+  position: relative;
+
+  &::before {
+    content: '\f041';
+    font-family: 'icomoon'; // что бы выставить картинку пишем позишэн:релатив. футэр инфо
+    color: $green; // а на ::бифор вешаем абсолют и лэфто ставим его в левую часть 
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+  }
+
+}
+
+.footer__info-phone {
+  &::before {
+    content: '\f095';
+  }
+}
+
+.footer__col-list {
+  a {
+    margin-bottom: 15px;
+    color: #b7c3c8;
+    padding-left: 22px;
+    position: relative;
+
+    &::before {
+      content: '\f105';
+      color: $green;
+      position: absolute;
+      left: 0;
+      font-size: 18px;
+      font-family: icomoon;
+    }
+  }
+}
+
+.footer__social-link {
+  margin-bottom: 33px;
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/css_sprites.png);
+
+  }
+}
+
+.link-facebook {
+  background-position: -28px -0;
+
+}
+
+.link-twiter {
+
+  background-position: -0 -28px;
+}
+
+.link-youtube {
+  background-position: -28px -28px;
+}
+
+.link-pinterest {
+  background-position: -56px -0px;
+}
+
+.clink-linledin {
+  background-position: -0px -0px;
+}
+
+.footer__form-title {
+  font-family: 'Roboto-Regular';
+  margin-bottom: 15px;
+  color: #fff;
+  font-style: 20px;
+}
+
+.footer__form {
+  position: relative;
+  input {
+    border: none;
+    background-color: #2f3c43;
+    display: block;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    font-style: 14px;
+    padding-left: 13px;
+    padding-right: 50px;
+
+    &::placeholder {
+      color: #697378;
+    }
+  }
+
+  button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $green;
+    border: none;
+    height: 40px;
+    width: 43px;
+    cursor: pointer;
+    &::before{
+      content: '\f124';
+      position: absolute;
+      font-family: icomoon;
+      color: #fff;
+      font-size: 20px;
+      top: 11px;
+      left: 13px;
+    }
+  }
+}
+
+//end footer
