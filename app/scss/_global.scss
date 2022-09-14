@@ -6,6 +6,11 @@ html{
 *::after{
     box-sizing: inherit;
 }
+html,
+body {
+  height: 100%;
+  
+}
 a{
     display: inline-block;
     text-decoration: none;
@@ -17,12 +22,33 @@ li{
     padding: 0;
     list-style: none;
 }
+
+
+
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+
 body{
     font-family: 'Roboto-Regular';
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
     color: $text;
+    overflow-x: hidden;
 }
 .container{
     max-width: 1200px;
@@ -41,6 +67,9 @@ body{
        padding: 0 15px;
     }
 }
+.page-content{
+  background-color: $grey;
+}
 .title{
     text-align: center;
     color: $bg;
@@ -49,4 +78,46 @@ body{
     font-size: 36px;
     line-height: 60px;
     margin-bottom: 30px;
+}
+
+.breadcrumbs{
+  &__inner{
+    padding: 45px 0px 40px;
+  }
+  &__list{
+    li{
+      display: inline-block;
+      position: relative;
+     
+      & + li{
+        padding-left: 24px;
+        &::before {
+            content: '-';
+            position: absolute;
+            left: 8px;
+            color: $green;
+          }
+      }
+      &:last-child{
+        a{               // last chield это обращение к последнему елементу в даннный момент к ссылке
+          color: $bg;
+        }
+      }
+    }
+    & a{
+      color: #b0bec5;
+    }
+  }
+}
+.angle-right{
+  position: relative;
+  padding-left: 15px;
+  &::before{
+    content: "\f105";
+    font-family: 'icomoon';
+    position: absolute;
+    left: 0;
+    color: $green;
+    font-size: 14px;
+  }
 }
