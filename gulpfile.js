@@ -25,7 +25,8 @@ gulp.task('style', function(){
               //  Подключаем библиотеки
         'node_modules/normalize.css/normalize.css',
         'node_modules/slick-carousel/slick/slick.css',                 
-        'node_modules/magnific-popup/dist/magnific-popup.css'
+        'node_modules/magnific-popup/dist/magnific-popup.css',
+      'node_modules/@fancyapps/ui/dist/fancybox.css'
         
     ])
         .pipe(concat('libs.min.css'))
@@ -38,8 +39,8 @@ gulp.task('script', function(){
               //  Подключаем библиотеки
         'node_modules/mixitup/dist/mixitup.js',
         'node_modules/slick-carousel/slick/slick.js',
-        'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
-        
+        'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+        'node_modules/@fancyapps/ui/dist/fancybox.umd.js'
         
     ])
         .pipe(concat('libs.min.js'))
