@@ -570,6 +570,13 @@
   padding: 110px 0px;
   background-color: $grey;
 
+
+}
+
+.products__wrapper,
+.product-slider__wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .products__inner-btn {
@@ -591,13 +598,20 @@
 
 .products__inner-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  margin-left: -30px;
   flex-wrap: wrap;
+}
+.products .products__item {
+  flex-basis: calc(25% - 30px);
+    margin-left: 30px;
+
 }
 
 .product__item {
   max-width: 442px;
   width: 100%;
+  
   box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
   margin-bottom: 30px;
 
@@ -1224,11 +1238,14 @@
 
 .products-page__content {
   width: 100%;
+}
 
+.products-page__content {
   .product__item {
-    max-width: 270px;
+    flex-basis: calc(33.3333% - 30px);
     background-color: #fff;
     transition: all .5s;
+    margin-left: 30px;
   }
 
   .product__item-img {
@@ -1254,6 +1271,7 @@
   justify-content: space-between;
   margin-bottom: 30px;
   flex-wrap: wrap;
+  margin-left: -30px;
 }
 
 .pagination__list {
@@ -1297,6 +1315,7 @@
 .product__item {
   &.list {
     max-width: 100%;
+    flex-basis: 100%;
 
     .product__item-img {
       width: 240px;
@@ -1339,7 +1358,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px 0;
+  padding: 16px 16px;
 
 }
 
@@ -1905,6 +1924,7 @@
   }
 }
 
+//end contanct
 //start settings
 .settings {
   padding-bottom: 100px;
@@ -2009,8 +2029,538 @@
   }
 }
 
+
 //end settings
-//end contanct
+// start profile
+.profile__inner {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.profile__aside {
+  margin-right: 30px;
+  max-width: 270px;
+  width: 100%;
+
+  & .footer__social-link {
+    margin-bottom: 30px;
+  }
+}
+
+.profile__content {
+  width: 100%;
+
+}
+
+
+.profile-status {
+  font-size: 13px;
+  padding: 6px 9px 5px 30px;
+  border: 1px solid #d6d6d6;
+  color: #707070;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 11px;
+    top: 13px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+  }
+}
+
+.profile-on {
+  &::before {
+    background-color: $green;
+  }
+}
+
+.profile-off {
+  &::before {
+    background-color: $red;
+  }
+}
+
+.profile__aside-btn {
+  margin-bottom: 13px;
+  text-align: center;
+}
+
+.profile__aside-message {
+  margin-bottom: 17px;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  padding: 18px 10px;
+  position: relative;
+  background-color: $text;
+  box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+
+  &::before {
+    content: "\f003";
+    font-family: icomoon;
+    position: absolute;
+    left: 50px;
+    top: 17px;
+  }
+}
+
+.profile__aside-following {
+  margin-bottom: 17px;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  background-color: $green;
+  padding: 18px 10px;
+  box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+}
+
+.profile__banner {
+  padding: 20px;
+  border: 1px solid #dedede;
+  background-color: #fff;
+  margin-bottom: 35px;
+}
+
+.profile__banner-images {
+  background-image: url(../images/content/benner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 332px;
+}
+
+.profile__items {
+  display: flex;
+  border: 1px solid #dedede;
+}
+
+.profile__item {
+  width: 25%;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px 5px 17px;
+
+  &+.profile__item {
+    border-left: 1px solid #dedede;
+  }
+}
+
+.profile__item-title {
+  font-size: 14px;
+  color: $bg;
+}
+
+.profil__item-content {
+  color: #707070;
+  font-size: 14px;
+
+  &.profile__item-sales {
+    color: $bg;
+  }
+}
+
+.profile-settings {
+  .product-one__tabs.settings__tabs {
+    .tabs span {
+      font-family: 'roboto', sans-serif !important;
+      font-weight: 500;
+      color: #707070;
+      position: relative;
+
+      &.active::before {
+        color: $green;
+      }
+
+      &::before {
+
+        position: absolute;
+        left: 27px;
+        top: 14px;
+        font-size: 14px;
+        font-family: 'icomoon';
+        color: #d0d0d0;
+      }
+    }
+  }
+}
+
+.personal-box {
+  background-color: #fff;
+  padding: 35px 40px 25px;
+  border: 1px solid #dedede;
+}
+
+.personal-box__title {
+  margin-bottom: 25px;
+  color: $bg;
+  font-size: 20px;
+}
+
+.personal-box__text {
+  margin-bottom: 20px;
+
+  p {
+    color: #707070;
+  }
+}
+
+.personal-box__item-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.personal-box__item-name {
+  font-size: 16px;
+  color: $bg;
+  font-style: italic;
+}
+
+.personal-box__item-number {
+  font-size: 16px;
+  color: $bg;
+}
+
+.personal-box__item-line {
+  height: 15px;
+  background-color: #f4f4f4;
+  border-radius: 3px;
+  margin-bottom: 23px;
+
+  span {
+    display: block;
+    height: 15px;
+    border-radius: 3px;
+    background-color: $green;
+  }
+}
+
+// end profile
+// start upload
+.upload__inner {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  margin-bottom: 110px;
+
+  button {
+    color: #fff;
+    background-color: $green;
+    border: none;
+    padding: 15px 36px;
+    margin-left: 175px;
+    cursor: pointer;
+  }
+}
+
+.upload__inner-title {
+  padding: 16px 35px 18px;
+  font-weight: 500;
+  font-size: 24px;
+  color: $bg;
+  border-bottom: 1px solid #d7d7d7;
+  margin-bottom: 40px;
+}
+
+.upload__inner-content {
+  margin-bottom: 30px;
+  padding-left: 45px;
+  padding-right: 50px;
+}
+
+.upload-line {
+  margin-bottom: 25px;
+  display: flex;
+
+  label {
+    min-width: 175px;
+    padding-top: 5px;
+    padding-right: 15px;
+    color: #444;
+
+    span {
+      color: $green;
+    }
+
+
+  }
+
+  select,
+  input,
+  textarea {
+    width: 100%;
+    display: block;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0px 18px;
+
+    &::placeholder {
+      color: #8bc34a;
+    }
+  }
+
+  textarea {
+    resize: none; // указівет может ли размер изменятся пользевателем
+    height: 150px;
+    padding: 8px 18px;
+  }
+
+  input[type="file"] {
+    outline: none;
+  }
+
+  .jq-file__browse {
+    position: absolute;
+    top: 5px;
+    right: auto;
+    left: 9px;
+    font-size: 12px;
+    line-height: 26px;
+    padding: 0px 12px;
+    border: 1px solid #d7d7d7;
+    border-left: 1px solid #d7d7d7;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    text-shadow: none;
+    color: #444;
+  }
+
+  .jq-file {
+    width: 100%;
+    padding: 0px 18px;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+  }
+
+  .jq-file__name {
+    margin-left: 112px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    border: none;
+    border-bottom-color: transparent;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    font-size: 12px;
+    color: #707070;
+    line-height: 40px;
+  }
+
+  .jq-selectbox {
+    width: 100%;
+  }
+
+  .jq-selectbox__select {
+    height: 40px;
+    padding: 0px 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: 'roboto-regular', sans-serif;
+    color: #707070;
+    text-shadow: none;
+    line-height: 40px;
+  }
+
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    top: 0;
+    right: 20px;
+    line-height: 40px;
+
+    font-size: 15px;
+
+    &::before {
+
+      font-family: 'icomoon';
+      content: "\e901";
+
+    }
+  }
+
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+}
+
+// end upload
+//start withdrawal
+.withdrawal__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 110px;
+}
+
+.withdrawal__col {
+  max-width: 570px;
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid #dedede;
+  height: 100%;
+}
+
+.withdrawal__title {
+  padding: 18px 32px 24px;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 30px;
+  color: $bg;
+  font-family: 'roboto-regular', sans-serif;
+  font-size: 24px;
+}
+
+.withdrawal__content {
+  padding-left: 35px;
+  padding-right: 40px;
+
+  button {
+    margin-bottom: 50px;
+    color: #fff;
+    background-color: $green;
+    border: none;
+    padding: 15px 36px;
+
+    cursor: pointer;
+  }
+}
+
+.withdrawal__form-line {
+  margin-bottom: 25px;
+
+  label {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'roboto-regular', sans-serif;
+    margin-bottom: 15px;
+    color: $bg;
+
+    span {
+      color: $green;
+    }
+  }
+
+  input,
+  select {
+    width: 100%;
+    display: block;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0px 18px;
+
+    &::placeholder {
+      color: #707070;
+    }
+  }
+
+
+
+  .jq-selectbox {
+    width: 100%;
+  }
+
+  .jq-selectbox__select {
+    height: 40px;
+    padding: 0px 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: 'roboto-regular', sans-serif;
+    color: #707070;
+    text-shadow: none;
+    line-height: 40px;
+  }
+
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    top: 0;
+    right: 20px;
+    line-height: 40px;
+
+    font-size: 15px;
+
+    &::before {
+
+      font-family: 'icomoon';
+      content: "\e901";
+
+    }
+  }
+
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+
+}
+
+.withdrawal__content-items {
+  padding-bottom: 35px;
+}
+
+.withdrawal__content-item {
+  display: flex;
+  width: 100%;
+  height: 42px;
+  align-items: center;
+  font-size: 13px;
+  color: #444;
+
+  &:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+
+  //event  закрасит только  четные  строки в боксе.
+  //odd закрасит не четные
+}
+
+.withdrawal__content-dat {
+  width: 154px;
+  padding-left: 20px;
+  font-family: 'roboto-regular', sans-serif;
+  font-weight: 500;
+}
+
+.withdrawal__content-email {
+  width: 180px;
+  font-family: 'roboto-regular', sans-serif;
+  font-weight: 500;
+}
+
+.withdrawal__content-price {
+  font-family: 'roboto-regular', sans-serif;
+  width: 70px;
+  font-weight: 700;
+}
+
+.withdrawal__content-status {
+  width: 88px;
+  font-family: 'roboto-regular', sans-serif;
+  font-weight: 700;
+
+  &.withdrawal__content-paid {
+    color: $green;
+  }
+
+}
+
+//end withdrawal
+
+
 
 
 
